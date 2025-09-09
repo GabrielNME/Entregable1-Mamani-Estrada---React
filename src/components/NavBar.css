@@ -1,0 +1,70 @@
+.navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: transparent; /* sin fondo */
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff; /* Blanco */
+  transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  color: #9ca3af; /* Gris claro */
+}
+
+/* Links */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin-left: 50dvw;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #9ca3af;
+}
+
+/* Carrito */
+.navbar-cart {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  color: #ffffff;
+}
+
+.navbar-cart:hover {
+  transform: scale(1.1);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ef4444; /* Rojo */
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
