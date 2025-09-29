@@ -2,11 +2,15 @@ import { useParams } from "react-router";
 import { getProductbyId } from "../data/mockAPI";
 import { useEffect, useState } from "react";
 import "./ItemDetailContainer.css";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
+import { Link } from "react-router";
 
 function ItemDetailContainer() {
   const { idParam } = useParams();
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     getProductbyId(idParam)
@@ -42,8 +46,15 @@ function ItemDetailContainer() {
         <p className="stock">Stock disponible: {product.stock}</p>
 
         <div className="buttons">
-          <button className="btn buy">COMPRAR AHORA</button>
-          <button className="btn cart">AGREGAR AL CARRITO</button>
+          <Link to="/cart" className="navbar-cart">
+            <button className="btn buy">COMPRAR AHORA</button>
+          </Link>
+          <button
+            className="btn cart"
+            onClick={() => addToCart(product, quantity)}
+          >
+            AGREGAR AL CARRITO
+          </button>
         </div>
 
         <div className="counter">
