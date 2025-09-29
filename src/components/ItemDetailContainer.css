@@ -1,0 +1,98 @@
+.item-detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 30px;
+  align-items: start;
+}
+
+.item-detail-img img {
+  width: 100%;
+  margin-left: 10vw;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.item-detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item-detail-info h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.item-detail-info .price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+.item-detail-info .stock {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Botones */
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.buy {
+  border: 1px solid #2ecc71;
+}
+
+.btn.buy:hover {
+  background: #2ecc71;
+  color: #fff !important;
+}
+
+.btn.cart {
+  border: 1px solid #3498db;
+}
+
+.btn.cart:hover {
+  background: #3498db;
+  color: #fff !important;
+}
+
+/* Contador */
+.counter {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.counter button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #eee;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.counter button:hover {
+  background: #ddd;
+}
+
+.counter span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

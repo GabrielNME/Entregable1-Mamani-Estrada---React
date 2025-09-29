@@ -1,14 +1,24 @@
+/* Contenedor principal */
 .item-container {
-  margin-top: 4rem;
-  background: #ffffff; /* blanco */
-  color: #1f1f1f; /* texto oscuro */
-  width: 80dvw;
-  height: 70dvh;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
+  margin: 0 10vw 5vh 10vw;
+  text-align: center;
+}
+
+/* Título */
+.item-container h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Contenedor de las tarjetas */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }

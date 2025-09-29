@@ -1,29 +1,45 @@
 import { ShoppingCart } from "lucide-react";
 import "./NavBar.css";
 import "./CartWidget.jsx";
-import CartWidget from "./CartWidget.jsx";
+import { useState, useEffect } from "react";
+import { Link } from "react-router";
+import CartWidget from "./CartWidget";
 
-const NavBar = () => {
+function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar">
-      {/* Logo */}
-      <div className="navbar-logo">MiEcommerce</div>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <Link to="/" className="navbar-logo">
+        MiEcommerce
+      </Link>
 
-      {/* Links */}
       <ul className="navbar-links">
         <li>
-          <a href="#">Items1</a>
+          <Link to="/category/Exterior">Exterior</Link>
         </li>
         <li>
-          <a href="#">Items2</a>
+          <Link to="/category/Interiores">Interiores</Link>
         </li>
         <li>
-          <a href="#">Items3</a>
+          <Link to="/category/Oficina">Oficina</Link>
         </li>
       </ul>
-      <CartWidget />
+
+      <Link to="/cart" className="navbar-cart">
+        <CartWidget />
+      </Link>
     </nav>
   );
-};
+}
 
-export default NavBar;
+export default Navbar;
