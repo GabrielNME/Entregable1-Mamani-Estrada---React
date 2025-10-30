@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { createOrder } from "../../data/firebase";
-import FormCheckout from "./formCheckout";
+import FormCheckout from "./FormCheckout";
 import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 import "./CartContainer.css";
