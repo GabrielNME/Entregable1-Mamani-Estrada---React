@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import app, { getProducts } from "./data/firebase";
 import ItemDetailcontainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import CartContainer from "./components/CartContainer/cartContainer";
+import CartContainer from "./components/CartContainer/CartContainer";
 
 export default function App() {
   console.log("Init Firebase", app);
