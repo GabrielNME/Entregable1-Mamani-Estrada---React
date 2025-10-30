@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { CartContext } from "./CartContext";
-import { ShoppingCart } from "lucide-react"; // o tu icono propio
+import { CartContext } from "../../context/CartContext";
+import { ShoppingCart } from "lucide-react";
 
 function CartWidget() {
   const { totalItems } = useContext(CartContext);

@@ -1,0 +1,139 @@
+.cart-container {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+}
+
+.cart-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2ecc71;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 80px 100px 40px;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(46, 204, 113, 0.2);
+}
+
+.cart-item-img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.cart-item-title {
+  font-weight: 500;
+  color: #333;
+}
+
+.cart-item-qty,
+.cart-item-price {
+  text-align: center;
+  font-weight: 500;
+  color: #555;
+}
+
+.cart-remove-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.cart-remove-btn:hover {
+  color: #c0392b;
+}
+
+.cart-total {
+  text-align: right;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2ecc71;
+  border-top: 2px solid #2ecc71;
+  padding-top: 1rem;
+}
+
+/* --- Formulario --- */
+.checkout-section {
+  margin-top: 40px;
+  border-top: 2px solid #eee;
+  padding-top: 20px;
+}
+
+.checkout-section h4 {
+  color: #2ecc71;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form label {
+  margin-bottom: 4px;
+}
+
+form input {
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+form input:focus {
+  border-color: #2ecc71;
+}
+
+form button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #27ae60;
+}
+
+/* --- Carrito vacío --- */
+.empty-cart-msg {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  padding: 60px 0;
+}

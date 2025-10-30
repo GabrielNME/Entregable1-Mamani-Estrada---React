@@ -3,7 +3,7 @@ import "./NavBar.css";
 import "./CartWidget.jsx";
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
-import CartWidget from "./CartWidget";
+import CartWidget from "./CartWidget.jsx";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);

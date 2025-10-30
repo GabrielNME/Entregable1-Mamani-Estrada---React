@@ -27,7 +27,7 @@ const products = [
     id: 104,
     title: "Set De Jardín Rattán 4 Piezas Marrón Oscuro",
     img: "https://arcencohogareasy.vtexassets.com/arquivos/ids/382822-500-auto?v=638646203082070000&width=500&height=auto&aspect=true",
-    price: 1.07525,
+    price: 1075250,
     stock: 22,
     category: "Exterior",
   },
